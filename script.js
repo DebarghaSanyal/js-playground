@@ -133,3 +133,62 @@
     }
 
 }
+
+// array ====================================================================================
+{
+    {
+        // add extra element at the end of an array
+        {
+            console.log("\npush pop toString method");
+            let val = [10, 20, 30, 40];
+            console.log(val);
+            val.push(50, 60);   //add to end
+            console.log(val);
+            let del = val.pop();
+            console.log(`${val} \ndeleted item = ${del}`);
+
+            console.log(val.toString());
+        }
+        // add extra element at the start of an array
+        {
+            console.log("\nunshift shift method");
+            let val = [10, 20, 30, 40];
+            console.log(val);
+            val.unshift(0);   //add to start
+            console.log(val);
+            let del = val.shift();
+            console.log(`${val} \ndeleted item = ${del}`);
+        }
+
+        //also work slice method as string do. [subarray]
+        //slice(start_idx,end_idx+1);
+
+        // changes in main array
+        // splice(start_idx, del_count, items_i_need_to_add)
+        {
+            console.log("\nslice method");
+            let arr = [9, 8, 7, 6, 5];
+            let a1 = arr.slice(1, 4);
+            console.log(a1);
+
+            console.log("\nsplice method");
+            console.log(arr);
+            arr.splice(1, 3, 101, 102);
+            console.log(arr);
+        }
+
+
+    }
+    // we can not concate 2 arrays in a same array, instade we have to store it in a different array
+    {
+        console.log("\nconcate method");
+        let a = [1, 2, 3, 4, 5];
+        let b = ["a", "b", "c", "d", "e"];
+        let d = [true, false];
+        let c = a.concat(b, d);
+        console.log(c);
+        // a = a.concate(b);        will not work
+        // console.log(a);
+    }
+
+}
