@@ -77,3 +77,59 @@
     let op = `The ${obj.item} cost around ${obj.price} rupees`;
     console.log(op);
 }
+
+// string manipulation  ==================================================================
+{
+    {
+        //we can't change the main str (immutable) but we can store the changed str in a new str
+        let str = "sdfsfYG";
+        let len = str.length;
+        let newStr = str.toLowerCase();
+        let newestStr = str.toUpperCase();
+        console.log(`${str} \t ${len} \t ${newStr} \t ${newestStr}`); //converts everything into string
+        console.log(str, len, newStr, newestStr);
+
+        //removes spaces form start and end (trim())
+        let s = "    fsd fs       ";
+        console.log(s, "\n", s.trim());
+
+        //substring (slice(start,end+1));
+        let s1 = "Hello_vs_code";
+        let s2 = s1.slice(2, 7);
+        console.log(s1, "\t", s2);
+
+        //combines 2 string (concate())
+        let s3 = str.concat(s1);
+        let s_ = str + s1;
+        console.log(s3);
+        console.log(s_);
+
+        //replace element for 1 time
+        let s4 = s3.replace('_', '()');
+        console.log(s4);
+        //replate element for the whole str
+        s4 = s3.replaceAll('_', '()');
+        console.log(s4);
+
+        //s4.chatAt(3);
+    }
+    // {
+    //     let user = prompt("Enter user name");
+    //     console.log(`Use ID: @${user}${user.length}`);
+    // }
+    {
+        console.log("\nincludes and indexOf method");
+        const browserType = "mozilla";
+
+        if (browserType.includes("zilla")) {
+            console.log("Found zilla!");
+        } else {
+            console.log("No zilla here!");
+        }
+
+        const tagline = "MDN - Resources for developers, by developers";
+        console.log(tagline.indexOf("developers")); // 20
+
+    }
+
+}
