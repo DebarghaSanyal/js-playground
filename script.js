@@ -192,3 +192,74 @@
     }
 
 }
+
+//Functions =====================================================================
+{
+    {
+        function newFunc(parameter) {
+            console.log(parameter);
+        }
+
+        newFunc("This is a function call"); // argument
+
+    }
+    newFunc("This is a function call"); // argument
+
+    // arrow function (short hand call of normal function)
+    //we can't put it in {}
+
+    const arrowFunc = (a, b) => {
+        console.log(a + b);
+    };
+    const arrowFunc1 = (a, b) => {
+        return (a * b);                 // will not work
+    };
+
+    arrowFunc(10, 20);
+    arrowFunc1(10, 20);
+
+    /*  HIgher order function/method is a function which passes functions as a parameter or returns a function [forEach()] */
+
+    {
+        //Specially used for arrays
+        console.log(`\nCall_back method`);
+        //A callback is a function passes as an argument to another function
+        let arr = [1, 2, 3, 4];
+        arr.forEach(function f(val) {
+            console.log(val);
+        });
+        //example
+        arr.forEach((val) => {
+            console.log(val, "   ", val * val);
+        });
+        //using arrow function (mostly use)
+        arr = ["a", "b", "c"];
+        arr.forEach((val) => {
+            console.log(val.toUpperCase());
+        });
+        arr.forEach((val, idx, arr) => {                  //we can also send the index and the array itself
+            console.log(val.toUpperCase(), idx, arr);
+        });
+    }
+
+    // we use forEach to perform some task/calculations
+    // we use map to perform some task and also return a new array after performing the task
+    {
+        let arr = [2, 4, 6];
+        let newArr = arr.map((val) => {
+            return val * val;
+        });
+        console.log(arr, newArr);
+
+        {
+            let a = newArr.forEach((val) => {   //will not work
+                return val / 2;
+            });
+            console.log(a);
+        }
+        // for in == index
+        // for of == element
+
+    }
+    
+}
