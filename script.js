@@ -261,5 +261,29 @@
         // for of == element
 
     }
-    
+    // filter method
+    {
+        console.log("\nFilter method");
+        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        let b = a.filter((val) => {     // filters out the odd elements from array a and store it into array b
+            return val % 2 !== 0;
+        });
+        console.log(`Odd elements = ${b}`);
+    }
+    // reduce method
+    // Performs some operations and reduces the array to a single value.
+    {
+        console.log("\nReduce method");
+        //taking input from user. (Entered elements from prompt assigned as string)
+        // let arr = [];
+        // let input = prompt("Enter elements");
+        // arr = input.split(" ").map(Number); 
+        let arr = [1, 2, 3, 4, 5];
+        let ans = arr.reduce((res, val) => {
+            return res + val;
+        });
+        console.log("Sum = ", ans);
+    }
+
 }
