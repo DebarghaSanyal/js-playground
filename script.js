@@ -286,4 +286,27 @@
         console.log("Sum = ", ans);
     }
 
+    //Examples/practice
+    {
+        {
+            let a = [90, 32, 54, 98, 32];
+            let greaterThan = a.filter((val) => {
+                return val >= 90; // will return a bool value. If 1 then the val will get stored in greaterThan
+            });
+            console.log(greaterThan);
+        }
+        // {
+        //     let n = prompt("Enter range");
+        //     let arr = [];
+        //     for (let i = 1; i <= n; i++){
+        //         arr[i - 1] = i;
+        //     }
+        //     let ans = arr.reduce((res, val) => {
+        //         return res + val;
+        //     });
+        //     console.log("Sum of ", n, "th number = ", ans);
+        // }
+    }
 }
+
+console.log("\n\n\n\n\n");
