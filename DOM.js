@@ -58,4 +58,96 @@ let qAll2 = document.querySelectorAll("tag");
         console.log(hi_text.textContent);   // use to show even the hidden texts (style=" display= hidden; ")
     }
 
+    // Attribute ============================================================================
+    {
+        // getAttribute
+        {
+            let att = document.querySelector("p");  // use to get the attribute of that tag/class/id
+            console.log(att.getAttribute("class")); // class/tag/id
+
+            let div = document.querySelector("div");
+            // console.log(div);                       // will not work for querySelectorAll()
+            // console.log(div.innerText);  
+            console.log(div.getAttribute("id"));
+        }
+        //setAttribute
+        {
+            let att = document.querySelector("p");
+            att.setAttribute("class", "setAttribute");  // changes class name (Element) console->undefined
+
+            //att/setAttribute("what we want to change [class/id]", "new name");
+
+            console.log(att.getAttribute("class"));     // new class name (class_Of_paragraph -> setAttribute)
+        }
+        // style
+        {
+            let ul = document.querySelector("ul");      // selects the 1st ul of our html code
+            ul.style.color = "red";                     // changes the ul color from white -> red
+        }
+    }
+
+    // Insert element   ===========================================================================
+    {
+        let newElement = document.createElement("button");  // (what we want to create)
+        newElement.innerText = "Click me!";                 // add some attributes
+
+        let newele = document.querySelector(".box");        // where to add
+
+        {
+            // append to add in end of .box
+            newele.append(newElement);
+            // prepend to add in start of .box
+            //    newele.prepend(newElement);
+            // before to add before of .box
+            //    newele.before(newElement);
+            // after to add after of .box
+            //    newele.after(newElement);
+        }
+
+        let newHead = document.createElement("h2");
+        newHead.innerHTML = "<i>DOM Manipulation</i>";
+        newHead.style.color = "dodgerblue";
+        newHead.style.textAlign = "center";
+        newele.before(newHead);
+
+        // hides the button on click
+        function hid() {
+            newElement.style.visibility = "hidden";
+        }
+        newElement.onclick = hid;
+    }
+
+    // remove element   ====================================================================
+    {
+        let rmv = document.querySelector(".para");
+        rmv.remove();
+
+        // To remove a specified element when knowing its parent node:
+        const parent = document.getElementById("parent");
+        const child = document.getElementById("child");
+        const throwawayNode = parent.removeChild(child);
+
+        //To remove a specified element without having to specify its parent node:
+        const node = document.getElementById("child1");
+        if (node.parentNode) {
+            node.parentNode.removeChild(node);
+        }
+
+        //To remove all children from an element:
+        // const element = document.getElementById("parent");
+        // while (element.firstChild) {
+        //     element.removeChild(element.firstChild);
+        // }
+
+        {
+            let i = 4;
+            function makechilde() {
+                let n = document.createElement("div");
+                n.innerText = `child ${i++}`;
+                parent.append(n);
+            }
+
+        }
+    }
+    
 }
