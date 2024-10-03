@@ -149,5 +149,43 @@ let qAll2 = document.querySelectorAll("tag");
 
         }
     }
-    
+
+    // classList
+    {
+
+        let list = document.querySelector(".hTag");
+        list.classList.add("hTag_overlap");             // hTag_overlap is in css
+        console.log(list.classList);                    // console (shows the list of all classes present under .hTag)
+    }
 }
+
+
+// practice =====================================
+{
+    let spam = document.querySelector(".spam_div");
+
+    let n_button = document.createElement("button");
+    n_button.innerText = "Multiple";
+    n_button.style.backgroundColor = "red";
+    n_button.style.color = "white";
+    n_button.style.margin = "5px";
+    n_button.style.borderRadius = "10px";
+    n_button.style.padding = "5px";
+    spam.append(n_button);
+
+    function Multiple() {
+        let i = 4;
+        while (i--) {
+            let n_button = document.createElement("button");
+            n_button.innerText = "Multiple";
+            n_button.style.backgroundColor = "red";
+            n_button.style.color = "white";
+            n_button.style.margin = "5px";
+            n_button.style.borderRadius = "10px";
+            n_button.style.padding = "5px";
+            spam.append(n_button);
+        }
+    }
+}
+
+console.log("\n\n\n\n\n");
