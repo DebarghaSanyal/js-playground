@@ -21,10 +21,57 @@ body {
 
 #div_id,
 .box,
-.para {
+.para,
+#parent,
+.spam_div,
+.hTag,
+.event_div {
     margin: 50px;
     color: aliceblue;
     padding: 60px;
     border: 1px solid aqua;
     text-align: center;
+}
+
+#div_id ul li,
+.box ul li {
+    list-style: none;
+    margin: 5px;
+}
+
+.spam_div h2,
+.event_div h2,
+#child3 {
+    margin-bottom: 20px;
+}
+
+/* new class which will get added by classList property */
+.hTag_overlap {
+    color: darkturquoise;
+    border-style: dotted;
+}
+
+#count_click {
+    padding: 10px;
+    background-color: rgb(83, 236, 83);
+    font-size: 18px;
+    font-weight: 600;
+    border-style: groove;
+    border-radius: 20px;
+}
+
+#count_click:hover,
+#theme:hover {
+    background-color: black;
+    border-color: aqua;
+    color: rgb(83, 236, 83);
+}
+
+#theme {
+    margin: 30px;
+    margin-bottom: -10px;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: gainsboro;
 }
