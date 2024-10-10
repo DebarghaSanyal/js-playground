@@ -61,7 +61,8 @@ body {
 }
 
 #count_click:hover,
-#theme:hover {
+#theme:hover,
+.button a:hover {
     background-color: black;
     border-color: aqua;
     color: rgb(83, 236, 83);
@@ -74,4 +75,13 @@ body {
     border-radius: 20px;
     font-weight: 600;
     background-color: gainsboro;
+}
+
+.button a {
+    background-color: gainsboro;
+    padding: 6px 5px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid rgb(0, 0, 97);
 }
